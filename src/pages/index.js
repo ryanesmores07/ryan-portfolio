@@ -6,7 +6,7 @@ const IndexPage = () => {
   return (
     <div>
       <Hero />
-      <Projects />
+      <Projects title="Projects" />
     </div>
   )
 }

@@ -21,7 +21,7 @@ const Hero = () => {
                 const { id, icon, url } = link
                 return (
                   <a href={url} key={id} className="social-link">
-                    {icon}
+                     {icon}
                   </a>
                 )
               })}
@@ -56,6 +56,7 @@ const Container = styled.header`
     margin: 0 auto;
     max-width: 1170px;
   }
+
   .hero-center {
     /* background-color: pink; */
     display: grid;
@@ -63,23 +64,17 @@ const Container = styled.header`
     height: 100vh;
     align-items: center;
   }
+
   .hero-info {
     grid-column: 1 / span 6;
   }
 
-  .underline {
-    width: 8rem;
-    height: 0.4rem;
-    margin-bottom: 1.25rem;
-    background: var(--clr-primary-5);
-    margin-left: 0;
-    margin-right: auto;
-  }
   .hero-img {
     display: block;
     grid-row: 1/1;
     grid-column: 7/-1;
   }
+
   .btn {
     margin-top: 2rem;
   }
@@ -90,11 +85,13 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
   }
+
   .social-link {
     font-size: 3rem;
     color: var(--clr-grey-1);
     transition: var(--transition);
   }
+
   .social-link:hover {
     color: var(--clr-primary-5);
   }
