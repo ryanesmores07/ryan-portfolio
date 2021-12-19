@@ -1,14 +1,44 @@
 import React from "react"
 import Hero from "../components/Hero"
 import Projects from "../components/Projects"
+import Footer from "../components/Footer"
+import { graphql } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage = ({
+  data: {
+    info: { nodes: projects },
+  },
+}) => {
   return (
     <div>
       <Hero />
-      <Projects title="Projects" />
+      <Projects title="Projects" projects={projects} />
+      <Footer />
     </div>
   )
 }
+
+export const query = graphql`
+  {
+    info: allContentfulProject {
+      nodes {
+        github
+        id
+        slug
+        title
+        url
+        description {
+          description
+        }
+        content {
+          stack
+        }
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
