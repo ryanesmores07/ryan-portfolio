@@ -25,7 +25,10 @@ const Projects = ({ title, projects }) => {
                 />
               </Link>
 
-              <p>{description.description}</p>
+              {/* <p className="project-desc">{description.description}</p> */}
+              {/* <div className="project-stack">
+                <span key={id}>{content.stack}</span>
+              </div> */}
             </article>
           )
         })}
@@ -36,6 +39,7 @@ const Projects = ({ title, projects }) => {
 
 const ProjectsContainer = styled.section`
   padding-top: 6rem;
+  padding-bottom: 8rem;
   background: var(--clr-grey-10);
   width: 100%;
   /* height: 90vh; */
@@ -52,6 +56,7 @@ const ProjectsContainer = styled.section`
   .project {
     background: var(--clr-white);
     padding: 3rem 1.5rem;
+    padding-bottom: 0;
     margin: 2rem 1rem;
     border-radius: var(--radius);
     text-align: center;
@@ -84,6 +89,22 @@ const ProjectsContainer = styled.section`
   }
   .project:hover .image-style::after {
     opacity: 0;
+  }
+
+  .project-desc {
+    color: var(--clr-grey-3);
+  }
+
+  .project-stack span {
+    display: inline-block;
+    background: var(--clr-grey-9);
+    color: var(--clr-grey-5);
+    margin: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
   }
 `
 

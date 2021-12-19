@@ -12,8 +12,7 @@ const IndexPage = ({
   return (
     <div>
       <Hero />
-      <Projects title="Projects" projects={projects} />
-      <Footer />
+      <Projects title="My Projects" projects={projects} />
     </div>
   )
 }
