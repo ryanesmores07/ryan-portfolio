@@ -22,6 +22,7 @@ const Projects = ({ title, projects }) => {
                 <GatsbyImage
                   image={getImage(image.gatsbyImageData)}
                   className="image-style"
+                  alt={title}
                 />
               </Link>
 

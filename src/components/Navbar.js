@@ -31,8 +31,8 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   z-index: 200;
-  /* background: var(--clr-white); */
-  background: transparent;
+  background: var(--clr-white);
+  /* background: transparent; */
   .nav-center {
     /* background-color: pink; */
     width: 90vw;
