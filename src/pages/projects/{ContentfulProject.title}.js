@@ -31,7 +31,6 @@ const Container = styled.article`
   span {
     display: inline-block;
     margin: 1rem;
-    display: inline-block;
     background: var(--clr-grey-9);
     color: var(--clr-grey-5);
     padding: 0.25rem 0.5rem;

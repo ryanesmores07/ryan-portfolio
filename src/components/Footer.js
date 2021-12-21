@@ -14,7 +14,9 @@ const Footer = () => {
             </a>
           )
         })}
-        <h5>Made with Gatsby ❤️</h5>
+        <h5>
+          Built with <a href="https://www.gatsbyjs.com/">Gatsby</a>{" "}
+        </h5>
       </div>
     </FooterContainer>
   )
@@ -27,6 +29,10 @@ const FooterContainer = styled.section`
   display: grid;
   text-align: center;
   color: var(--clr-white);
+
+  a {
+    color: violet;
+  }
 
   h5 {
     font-weight: 300;

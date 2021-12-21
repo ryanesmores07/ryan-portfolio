@@ -26,8 +26,8 @@ const Projects = ({ title, projects }) => {
                 />
               </Link>
 
-              {/* <p className="project-desc">{description.description}</p> */}
-              {/* <div className="project-stack">
+              {/* <p className="project-desc">{description.description}</p>
+              <div className="project-stack">
                 <span key={id}>{content.stack}</span>
               </div> */}
             </article>
