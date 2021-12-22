@@ -36,6 +36,7 @@ const FooterContainer = styled.section`
 
   h5 {
     font-weight: 300;
+    text-align: center;
   }
 
   .section-center {
@@ -48,7 +49,8 @@ const FooterContainer = styled.section`
   }
 
   .social-link {
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
+    margin: 1rem 1.5rem 1rem;
     font-size: 2.75rem;
     color: var(--clr-white);
     transition: var(--transition);

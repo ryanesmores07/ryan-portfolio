@@ -12,8 +12,8 @@ const Projects = ({
 }) => {
   return (
     <Container>
+      <Title title="My Projects" />
       {datas.map((data, index) => {
-        console.log(data.content.stack)
         return (
           <article key={index} className="project">
             <GatsbyImage
@@ -85,7 +85,7 @@ const Container = styled.main`
   }
   .project-number {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--clr-primary-5);
     margin-bottom: 0.75rem;
   }

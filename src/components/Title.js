@@ -11,7 +11,7 @@ const Title = ({ title }) => {
 }
 
 const TitleContainer = styled.div`
-  margin-bottom: 4rem;
+  margin: 4rem auto 5rem;
   text-align: center;
 
   .underline {
