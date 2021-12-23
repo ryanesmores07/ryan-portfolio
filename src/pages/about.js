@@ -20,10 +20,15 @@ const About = ({ data }) => {
           </span>
         </div>
         <div className="about-img">
-          {images.map(image => {
+          {images.map((image, index) => {
             const img = image.childrenImageSharp[0].gatsbyImageData
             return (
-              <GatsbyImage image={getImage(img)} alt="ryan" className="img" />
+              <GatsbyImage
+                key={index}
+                image={getImage(img)}
+                alt="ryan"
+                className="img"
+              />
             )
           })}
         </div>
