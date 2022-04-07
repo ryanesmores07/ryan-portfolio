@@ -83,12 +83,14 @@ const Container = styled.main`
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
   }
+
   .project-number {
     display: inline-block;
     font-size: 2rem;
     color: var(--clr-primary-5);
     margin-bottom: 0.75rem;
   }
+
   .project-slug h3 {
     font-weight: 500;
     font-size: 1.25rem;
@@ -97,13 +99,16 @@ const Container = styled.main`
     color: var(--clr-grey-1);
     transition: var(--transition);
   }
+
   .project-slug h3:hover {
     color: var(--clr-primary-5);
   }
+
   .project-desc {
     word-spacing: 15px;
     color: var(--clr-grey-3);
   }
+
   .project-stack {
     margin-bottom: 1rem;
   }
@@ -127,10 +132,12 @@ const Container = styled.main`
     font-size: 2rem;
     margin-right: 1rem;
     transition: var(--transition);
+
+    &:hover {
+      color: var(--clr-primary-1);
+    }
   }
-  .project-icon:hover {
-    color: var(--clr-primary-1);
-  }
+
   @media screen and (min-width: 576px) {
     .project-img {
       height: 19rem;
@@ -146,14 +153,16 @@ const Container = styled.main`
       grid-template-columns: repeat(12, 1fr);
       align-items: center;
     }
+
     .project-img {
       grid-column: 1 / span 8;
-      /* grid-column-end: 8; */
       grid-row: 1 / 1;
       height: 50rem;
+      object-fit: cover;
       border-radius: var(--radius);
       box-shadow: var(--dark-shadow);
     }
+
     .project-info {
       border-radius: var(--radius);
       box-shadow: var(--dark-shadow);
@@ -162,70 +171,18 @@ const Container = styled.main`
       grid-column: 5 /12;
       grid-row: 1 / 1;
     }
+
     .project:nth-of-type(even) .project-img {
       grid-column: 5 / -1;
       grid-row: 1 / 1;
     }
+
     .project:nth-of-type(even) .project-info {
       grid-column: 2 / span 7;
       grid-row: 1 / 1;
       text-align: left;
     }
   }
-
-  /* background: var(--clr-grey-10);
-  min-height: calc(100vh - 5rem - 9rem);
-  
-
-  .project {
-    grid-template-columns: repeat(12, 1fr);
-    display: grid;
-    align-items: center;
-   
-
-    padding-top: 10rem;
-  }
-
-  .project-img {
-    grid-column: 3 / 8;
-
-    
-    height: 30rem;
-    margin-bottom: 3rem;
-  }
-
-  .project-info {
-    background: var(--clr-white);
-    grid-column: 5 / 11;
-    height: 30rem;
-    
-    z-index: 1;
-    padding: 1rem 2rem;
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-  }
-
-  .project-img,
-  .project-info {
-    grid-row: 1 / 2;
-  }
-
-  .project-slug h3 {
-    font-weight: 500;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    color: var(--clr-grey-1);
-    transition: var(--transition);
-  }
-  .project-slug h3:hover {
-    color: var(--clr-primary-5);
-  }
-
-  .project-desc {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  } */
 `
 
 export const query = graphql`
@@ -251,27 +208,3 @@ export const query = graphql`
 `
 
 export default Projects
-
-{
-  /* <ProjectContainer>
-      <article className="project">
-        {datas.map((data, index) => {
-          return (
-            <>
-              <GatsbyImage
-                image={getImage(data.image.gatsbyImageData)}
-                className="project-img"
-                alt={data.title}
-              />
-              <div className="project-info">
-                <Link to={`/projects/${data.slug}`} className="project-slug">
-                  <h3>{data.title}</h3>
-                </Link>
-                <p className="project-desc">{data.description.description}</p>
-              </div>
-            </>
-          )
-        })}
-      </article>
-    </ProjectContainer> */
-}

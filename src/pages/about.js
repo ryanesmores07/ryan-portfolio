@@ -12,12 +12,11 @@ const About = ({ data }) => {
       <Title title={"About me"} />
       <section className="section-center">
         <div className="about-info">
-          Hi, my name is Ryan Esmores, I am 29 years old born in the
-          Philippines. I like to lift heavy things up and put them back down.{" "}
-          <span>
-            It was year 2020, the year COVID hit the world, when I decided to
-            change my life and start learning web development.
-          </span>
+          Hi, my name is Ryan Esmores, I am 29 years old, born in the
+          Philippines. My hobby is lifting heavy things and putting it back
+          down. It was July 2021, when I bought a course about HTML and CSS in
+          Udemy, and finally decided to start learning Front-end Development
+          with the dream of becoming a Web Developer!
         </div>
         <div className="about-img">
           {images.map((image, index) => {
